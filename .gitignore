@@ -5,5 +5,5 @@ node_modules
 assets/css/
 assets/js/
 assets/vendor/
-
+.DS_Store
 Thumbs.db

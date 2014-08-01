@@ -1,2 +1,2 @@
-chrome-password
+Chrome Password Manager
 ===============
