@@ -1,0 +1,40 @@
+{
+    "name": "Chrome Password Manager",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Chrome Password Manager",
+    "homepage_url": "https://github.com/AveVlad/ChromePasswordManager",
+    "icons": {
+        "16": "assets/icons/icon128.png",
+        "48": "assets/icons/icon128.png",
+        "128": "assets/icons/icon128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "page": "src/bg/background.html",
+        "persistent": true
+    },
+    "options_page": "src/options_custom/index.html",
+    "browser_action": {
+        "default_icon": "assets/icons/icon128.png",
+        "default_title": "Chrome Password Manager",
+        "default_popup": "src/browser_action/browser_action.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["assets/js/main.js"]
+        }
+    ],
+    "permissions": [
+        "bookmarks",
+        "chrome://favicon/",
+        "clipboardRead",
+        "clipboardWrite",
+        "contentSettings",
+        "contextMenus",
+        "notifications",
+        "tabs",
+        "*://*/*"
+    ]
+}
