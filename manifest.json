@@ -22,19 +22,14 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://*/*"],
+            "matches": ["http://*/*", "https://*/*"],
             "js": ["assets/js/main.js"]
         }
     ],
     "permissions": [
-        "bookmarks",
         "chrome://favicon/",
-        "clipboardRead",
-        "clipboardWrite",
-        "contentSettings",
-        "contextMenus",
-        "notifications",
         "tabs",
-        "*://*/*"
+        "http://*/*",
+        "https://*/*"
     ]
 }
